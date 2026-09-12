@@ -2,7 +2,7 @@
 
 本项目是面向金陵科技学院与昆士兰科技大学（QUT）合作项目学生的非官方资料指南，整理项目课程、升学衔接、语言准备、费用预算、住宿选择、校园地图和 QUT 生活等信息。
 
-> 当前版本：`V26.1.6.1`  
+> 当前版本：`V26.2.1.1`
 > 项目地址：[Leamon-Lee/jit-qut-undergraduate-guidebook](https://github.com/Leamon-Lee/jit-qut-undergraduate-guidebook)
 
 ## 项目内容
