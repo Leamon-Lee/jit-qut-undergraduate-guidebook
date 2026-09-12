@@ -26,3 +26,6 @@
 /latex/*.synctex(busy)
 /latex/*.toc
 /latex/*.xdv
+
+# Release 上传用的最终 PDF
+/output/
