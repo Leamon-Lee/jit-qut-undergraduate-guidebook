@@ -1,0 +1,73 @@
+\contentsline {section}{\numberline {1}先了解这个项目}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}快速了解一下 QUT}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}关于你们的学长}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}中外合办课程}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}快速了解一下 JIT}{6}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}JIT 学校生活常用网站}{6}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}快速了解一些事项}{6}{subsubsection.1.4.2}%
+\contentsline {paragraph}{校园跑}{6}{paragraph*.2}%
+\contentsline {paragraph}{四六级}{6}{paragraph*.3}%
+\contentsline {paragraph}{计算机等级考试}{6}{paragraph*.4}%
+\contentsline {paragraph}{出国问题}{6}{paragraph*.5}%
+\contentsline {paragraph}{选课问题}{6}{paragraph*.6}%
+\contentsline {paragraph}{外方课}{6}{paragraph*.7}%
+\contentsline {paragraph}{雅思要求}{6}{paragraph*.8}%
+\contentsline {paragraph}{学费生活费}{6}{paragraph*.9}%
+\contentsline {paragraph}{加入校学生会}{7}{paragraph*.10}%
+\contentsline {paragraph}{加入社团}{7}{paragraph*.11}%
+\contentsline {paragraph}{奖学金}{7}{paragraph*.12}%
+\contentsline {section}{\numberline {2}每学期课程}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}大一上学期}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}大一下学期}{8}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}国内课程}{9}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}外方课程}{9}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}大二上学期}{10}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}国内课程}{10}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}外方课程}{10}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}大二下学期}{10}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}国内课程}{10}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}外方课程}{11}{subsubsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.5}大三上学期}{12}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}国内课程}{12}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}外方课程}{12}{subsubsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.6}大三下学期 (G23 参考)}{13}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}国内课程}{13}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}外方课程}{13}{subsubsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.7}第四年QUT课程}{14}{subsection.2.7}%
+\contentsline {paragraph}{QUT 最后一年可选择的专业方向}{14}{paragraph*.13}%
+\contentsline {paragraph}{三项专业方向及课程 (\text {$\mathsurround \z@ \mathchar "458$}表示已在国内修过的课程)}{14}{paragraph*.14}%
+\contentsline {subsubsection}{\numberline {2.7.1}IT 公共课程}{15}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}IT Minor}{15}{subsubsection.2.7.2}%
+\contentsline {section}{\numberline {3}QUT生活}{16}{section.3}%
+\contentsline {subsection}{\numberline {3.1}2027年学期节奏}{16}{subsection.3.1}%
+\contentsline {paragraph}{人民币换算口径}{16}{paragraph*.15}%
+\contentsline {subsection}{\numberline {3.2}日常生活费}{16}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}机票预算}{16}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}QUT附近住宿价格}{17}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}学生公寓常见房型}{17}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}澳洲常见床型大小}{18}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}电话卡, 银行卡, 公交卡}{18}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}电话卡}{18}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}银行卡}{19}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}公交卡}{20}{subsubsection.3.5.3}%
+\contentsline {paragraph}{机场 Airtrain}{20}{paragraph*.16}%
+\contentsline {subsection}{\numberline {3.6}一年总预算}{20}{subsection.3.6}%
+\contentsline {section}{\numberline {4}雅思相关的问题}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}官方入口}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}先确认自己需要哪一种考试}{22}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}四个部分考什么}{22}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}分数怎么看}{22}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}怎么开始准备}{23}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}G24 软件工程刘沈晨学长经验分享 (雅思 7.0)}{23}{subsubsection.4.5.1}%
+\contentsline {paragraph}{听力与阅读}{23}{paragraph*.17}%
+\contentsline {paragraph}{写作}{23}{paragraph*.18}%
+\contentsline {paragraph}{口语}{23}{paragraph*.19}%
+\contentsline {paragraph}{心态与复考}{23}{paragraph*.20}%
+\contentsline {section}{\numberline {A}QUT国际学生学费参考}{24}{appendix.A}%
+\contentsline {section}{\numberline {B}QUT 2027年学术日历}{25}{appendix.B}%
+\contentsline {section}{\numberline {C}昆士兰州与布里斯班地理信息}{27}{appendix.C}%
+\contentsline {section}{\numberline {D}QUT 相关的地图}{30}{appendix.D}%
+\contentsline {section}{\numberline {E}金陵科技学院 (江宁校区) 地图}{33}{appendix.E}%
+\contentsline {section}{\numberline {F}未达到语言要求时的语言班说明}{34}{appendix.F}%
+\contentsline {section}{\numberline {G}校园跑细则}{35}{appendix.G}%
+\contentsline {section}{\numberline {H}澳洲房型介绍}{38}{appendix.H}%

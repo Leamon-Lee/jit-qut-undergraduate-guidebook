@@ -1,0 +1,27 @@
+# LaTeX 编译输出目录
+/latex/build/
+/latex/$out/
+/latex/qa/
+/latex/pics/qa-brisbane/
+/latex/pics/rendered-pdf/
+
+# LaTeX 在 latex 目录根部生成的辅助文件
+/latex/*.aux
+/latex/*.bbl
+/latex/*.bcf
+/latex/*.blg
+/latex/*.fdb_latexmk
+/latex/*.fls
+/latex/*.idx
+/latex/*.ilg
+/latex/*.ind
+/latex/*.lof
+/latex/*.log
+/latex/*.lot
+/latex/*.out
+/latex/*.pdf
+/latex/*.run.xml
+/latex/*.synctex
+/latex/*.synctex.gz
+/latex/*.toc
+/latex/*.xdv
