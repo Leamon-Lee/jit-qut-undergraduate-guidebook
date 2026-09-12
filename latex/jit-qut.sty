@@ -90,14 +90,14 @@
       \ignorespaces
 }
 
-% 正式来源、已修课程和不可选 Major 的统一显示方式
+% 正式来源, 已修课程和不可选 Major 的统一显示方式
 \newcommand{\official}[2]{\href{#1}{#2}}
 \newcommand{\completedcourse}[2]{%
   \textcolor{black!50}{\href{#1}{\textcolor{blue!50!white}{#2}}\,\checkmark}%
 }
 \newcommand{\unavailablemajor}[1]{\textcolor{black!40}{\sout{#1}}}
 
-% 历史编者名录：姓名、邮箱和贡献说明均可按需填写，邮箱为空时不显示.
+% 历史编者名录：姓名, 邮箱和贡献说明均可按需填写, 邮箱为空时不显示.
 \newcommand{\qutrosteremail}[1]{\href{mailto:#1}{\texttt{#1}}}
 \newcommand{\qutrosterperson}[3]{%
   \item \textbf{#1}%
@@ -105,7 +105,7 @@
   \ifstrempty{#3}{}{：#3}%
 }
 
-% 参数：年度主版本、已收录版本范围、编者条目、贡献者条目.
+% 参数：年度主版本, 已收录版本范围, 编者条目, 贡献者条目.
 \newcommand{\qutversionroster}[4]{%
   \par\medskip
   \noindent{\large\bfseries #1}\par
@@ -131,7 +131,7 @@
 \let\origclearpage\clearpage
 \renewcommand{\clearpage}{\finishcourse\origclearpage}
 
-% 地图附录页面：按地图实际显示宽度创建页面，并统一添加页眉、页码和来源
+% 地图附录页面：按地图实际显示宽度创建页面, 并统一添加页眉, 页码和来源
 \newsavebox{\qutmapbox}
 \newlength{\qutmapwidth}
 \newlength{\qutmapheight}
