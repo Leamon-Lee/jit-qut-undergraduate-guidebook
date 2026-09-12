@@ -1,0 +1,68 @@
+JIT-QUT PROJECT NON-COMMERCIAL, AUTHORIZED-MAINTAINER LICENSE
+项目专用非商业及限定编辑许可 v1.0
+
+Copyright (c) 2026 Li Jingru, Miao Pengzhe, and authorized contributors.
+版权所有 (c) 2026 李京儒、缪彭哲及获授权贡献者.
+
+一、适用范围
+
+本许可仅适用于本仓库中由项目作者或获授权贡献者原创的文字、LaTeX 源代码、
+排版结构、宏命令以及其他明确标注为本项目原创的内容（以下简称“项目内容”）。
+
+本仓库中的 QUT、学校、官方机构或其他第三方提供的图片、PDF、地图、字体、代码、
+商标、文字和其他材料（以下简称“第三方材料”）不属于本项目原创授权范围，仍由
+其各自权利人享有权利。使用者必须遵守第三方材料原有的许可证、版权声明和使用
+条件。本项目作者不授予任何超出原权利人许可范围的权利。
+
+二、允许的使用
+
+在保留本许可证、版权声明、来源说明和第三方材料声明的前提下，任何个人均可为
+个人学习、非商业教育或非商业研究目的查看、下载和分享未修改的项目内容。
+
+三、编辑与衍生版本
+
+只有下列人员属于“获授权维护者”，可以修改项目内容、提交修改后的版本，或公开
+分发基于项目内容的衍生版本：
+
+1. 曾经参加、正在参加或实际经历 JIT-QUT 项目的学生、毕业生或其他项目经历者；
+2. JIT-QUT 项目所属学校或合作院校中，以教学、管理、研究或学生支持身份履职的
+   校方人员。
+
+获授权维护者进行修改和发布时，必须：
+
+1. 保留原作者、贡献者、版权和本许可证信息；
+2. 清楚标明修改内容和修改日期；
+3. 不得移除、遮盖或重新声明第三方材料的来源和权利信息；
+4. 仅用于个人学习、非商业教育、非商业研究或项目内部服务；
+5. 不得暗示本项目作者、JIT-QUT 项目、金陵科技学院或 QUT 对其修改内容提供
+   官方背书。
+
+未经授权的人员不得修改、重新包装、再发布或以其他方式分发项目内容的衍生版本。
+如需获得维护者授权，请通过 GitHub 仓库联系项目维护者。
+
+四、禁止营利性机构商用
+
+任何营利性公司、培训机构、中介机构、商业平台或其他以营利为目的的组织，均不得
+使用、复制、修改、分发、出版、销售、出租、许可、嵌入其产品或服务，或以其他方式
+将项目内容用于商业优势或金钱收益。除非相关权利人另行书面授权，本条限制不因
+项目内容已公开发布而失效。
+
+五、无担保与责任限制
+
+项目内容按“现状”提供，不对准确性、完整性、时效性、适用性或不侵权作任何明示
+或默示保证。使用者应自行核对学校、QUT 及其他权利人发布的最新信息。法律允许的
+最大范围内，项目作者和贡献者不对因使用项目内容产生的任何损失承担责任。
+
+六、权利保留
+
+除本许可证明确授予的有限权利外，项目内容的全部权利均由相应权利人保留。违反
+本许可证的授权自动终止；但终止不影响权利人依法主张其他权利。
+
+English summary
+
+This is a project-specific, non-commercial, source-available license. Unmodified copies
+may be shared for personal, educational, and research purposes. Only JIT-QUT project
+participants, alumni, or authorized university staff may edit and redistribute derivative
+versions. Commercial organizations may not use, reproduce, modify, distribute, sell,
+license, or commercially exploit the Project Content. Third-party materials remain under
+their respective rights and licenses. The Chinese version controls in case of conflict.
