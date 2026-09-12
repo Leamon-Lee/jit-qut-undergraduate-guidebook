@@ -97,6 +97,30 @@
 }
 \newcommand{\unavailablemajor}[1]{\textcolor{black!40}{\sout{#1}}}
 
+% 历史编者名录：姓名、邮箱和贡献说明均可按需填写，邮箱为空时不显示.
+\newcommand{\qutrosteremail}[1]{\href{mailto:#1}{\texttt{#1}}}
+\newcommand{\qutrosterperson}[3]{%
+  \item \textbf{#1}%
+  \ifstrempty{#2}{}{\quad\qutrosteremail{#2}}%
+  \ifstrempty{#3}{}{：#3}%
+}
+
+% 参数：年度主版本、已收录版本范围、编者条目、贡献者条目.
+\newcommand{\qutversionroster}[4]{%
+  \par\medskip
+  \noindent{\large\bfseries #1}\par
+  \ifstrempty{#2}{}{\noindent\textit{已收录版本：}\texttt{#2}\par}
+  \smallskip
+  \noindent\textbf{编者}\par
+  \begin{itemize}[leftmargin=1.7em,itemsep=0.15em,topsep=0.2em,parsep=0pt,partopsep=0pt]
+    #3
+  \end{itemize}
+  \noindent\textbf{贡献者}\par
+  \begin{itemize}[leftmargin=1.7em,itemsep=0.15em,topsep=0.2em,parsep=0pt,partopsep=0pt]
+    #4
+  \end{itemize}
+}
+
 % 在切换标题或分页时自动关闭课程卡片，同时保留标题的可选参数
 \pretocmd{\section}{\coursereset}{}{}
 \pretocmd{\subsection}{\coursereset}{}{}
