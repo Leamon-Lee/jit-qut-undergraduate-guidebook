@@ -100,8 +100,10 @@
 % 历史编者名录：姓名, 邮箱和贡献说明均可按需填写, 邮箱为空时不显示.
 \newcommand{\qutrosteremail}[1]{\href{mailto:#1}{\texttt{#1}}}
 \newcommand{\qutauthor}[3]{%
-  \textbf{#1}\\[-0.1em]
-  {\small #2\quad\qutrosteremail{#3}}%
+  \begin{tabular}[t]{c}
+    \textbf{#1}\\[-0.1em]
+    {\small #2\quad\qutrosteremail{#3}}
+  \end{tabular}%
 }
 \newcommand{\qutrosterperson}[3]{%
   \item \textbf{#1}%
