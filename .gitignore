@@ -23,5 +23,6 @@
 /latex/*.run.xml
 /latex/*.synctex
 /latex/*.synctex.gz
+/latex/*.synctex(busy)
 /latex/*.toc
 /latex/*.xdv

@@ -1,120 +1,11 @@
-\documentclass[UTF8,a4paper,12pt]{ctexart}
+% !TeX program = lualatex
+\documentclass{jit-qut}
 
 \title{\zihao{-2}\bfseries JIT-QUT 项目求生指南}
 \author{李京儒~缪彭哲}
 \date{2026 年 9 月}
 
-\usepackage[margin=2.5cm]{geometry}
-\usepackage{array}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{tabularx}
-\usepackage{graphicx}
-\usepackage{pdfpages}
-\usepackage{amssymb}
-\usepackage{enumitem}
-\usepackage{float}
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{needspace}
-\usepackage[table]{xcolor}
-\usepackage[normalem]{ulem}
-\usepackage[most]{tcolorbox}
-\setstretch{1.2}
-\setlist[itemize]{leftmargin=2em}
-\setlist[enumerate]{leftmargin=2em}
-\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
-
-\newcolumntype{L}{>{\raggedright\arraybackslash}p{0.58\textwidth}}
-\newcolumntype{R}{>{\raggedright\arraybackslash}p{0.28\textwidth}}
-\newif\ifcourseopen
-\newif\ifcourseheaderprinted
-\newcounter{courseitem}
-\newcommand{\finishcourse}{%
- \ifcourseopen
- \par\end{minipage}\end{tcolorbox}%
- \courseopenfalse
- \fi
-}
-\newcommand{\coursereset}{\finishcourse\setcounter{courseitem}{0}\courseheaderprintedfalse}
-\newcommand{\courseheader}{%
- \ifcourseheaderprinted\else
- \par\medskip
- \noindent
- \begin{tcolorbox}[
- enhanced,
- colback=black!12,
- colframe=black!12,
- boxrule=0pt,
- arc=0pt,
- outer arc=0pt,
- boxsep=0pt,
- left=6pt,
- right=6pt,
- top=3pt,
- bottom=3pt,
- width=\textwidth
- ]%
- \small
- \begin{minipage}[t]{0.08\linewidth}
- \raggedright\bfseries 学分
- \end{minipage}\hfill
- \begin{minipage}[t]{0.92\linewidth}
- \bfseries 课程描述
- \end{minipage}
- \end{tcolorbox}%
- \courseheaderprintedtrue
- \fi
-}
-\newenvironment{coursetable}{\par\medskip}{\finishcourse\par\medskip}
-
-\newcommand{\course}[2]{%
- \finishcourse
- \courseheader
- \Needspace{5\baselineskip}%
- \stepcounter{courseitem}%
- \ifodd\value{courseitem}\def\coursebg{white}\else\def\coursebg{black!5}\fi
- \begin{tcolorbox}[
- enhanced,
- colback=\coursebg,
- colframe=\coursebg,
- boxrule=0pt,
- arc=0pt,
- outer arc=0pt,
- boxsep=0pt,
- left=6pt,
- right=6pt,
- top=4pt,
- bottom=4pt,
- before skip=1pt,
- after skip=1pt,
- width=\textwidth
- ]%
- \small
- \begin{minipage}[t]{0.08\linewidth}
- \raggedright\bfseries #2
- \end{minipage}\hfill
- \begin{minipage}[t]{0.92\linewidth}
- \textbf{#1}\par
- \courseopentrue
- \ignorespaces
-}
-\newcommand{\official}[2]{\href{#1}{#2}}
-\newcommand{\completedcourse}[2]{\textcolor{black!50}{\href{#1}{\textcolor{blue!50!white}{#2}}\,\checkmark}}
-\newcommand{\unavailablemajor}[1]{\textcolor{black!40}{\sout{#1}}}
-
-\let\origsection\section
-\renewcommand{\section}{\coursereset\origsection}
-\let\origsubsection\subsection
-\renewcommand{\subsection}{\coursereset\origsubsection}
-\let\origsubsubsection\subsubsection
-\renewcommand{\subsubsection}{\coursereset\origsubsubsection}
-\let\orignewpage\newpage
-\renewcommand{\newpage}{\finishcourse\orignewpage}
-\let\origclearpage\clearpage
-\renewcommand{\clearpage}{\finishcourse\origclearpage}
-
-
+\setcounter{tocdepth}{2}
 
 \begin{document}
 
@@ -146,8 +37,9 @@ QUT分为两个校区, 而我们第四年所要去的是 G.P. 校区. 详细地�
 	\caption{QUT G.P. 校区的地图}
 \end{figure}
 
-\subsection{关于你们的学长}
-你们的G23缪彭哲学长和G23尤嘉晨学长已去与袋鼠自由搏击.
+\subsubsection{关于你们的先驱者}\footnotemark
+\footnotetext{这里的“先驱者”泛指已经赴澳学习的学长学姐。由于目前没有学姐的照片，暂以现有资料为主，敬请见谅。}
+G23 缪彭哲学长和 G23 尤嘉晨学长已经先行赴澳，在 QUT 开启了与袋鼠“自由搏击”的留学生活。
 
 \begin{figure}[H]
 	\centering
@@ -285,7 +177,7 @@ QUT Unit 代码 & 课程名称 & 学分 \\
 考核方式: 考查. 没啥, 上课认真听, 别旷课, 别睡觉.
 \course{基础课 (体育1)}{1}
 考核方式: 体育考试.
-
+\newpage
 \subsection{大一下学期}
 如果 C++ 和 Python 学得不错, 有兴趣的话可以深入学习一下算法. 可以参考 \official{https://www.hello-algo.com/}{Hello 算法} 入个门, 后面去 \official{https://www.acwing.com/}{AcWing} 和 \official{https://www.luogu.com.cn/}{洛谷} 上继续深造一下. 
 \subsubsection{国内课程}
@@ -321,7 +213,7 @@ QUT Unit 代码 & 课程名称 & 学分 \\
 考核方式: 中方 (写 SQL 报告); 外方 (考试). 建议提前学习一下 SQL 语言以及 ER 图怎么画. 具体外方课是学习 ORM (Object-Role Modeling) 的数据库建模.
 
 
-
+\newpage
 \subsection{大二上学期}
 
 \subsubsection{国内课程}
@@ -352,6 +244,7 @@ QUT Unit 代码 & 课程名称 & 学分 \\
 \course{Building IT Systems (IT 系统架构)}{3}
 考核方式: 中方 (Python 实验报告); 外方 (考试). 本课程已改名为 Introduction to Programming, 主要学习 Python.
 
+\newpage
 \subsection{大二下学期}
 
 \subsubsection{国内课程}
@@ -427,6 +320,8 @@ QUT Unit 代码 & 课程名称 & 学分 \\
 
 本项目采用``3+1''课程路径: 前三年在金陵科技学院完成国内阶段学习, 最后一年赴 QUT 学习信息技术学士阶段课程. QUT 最后一年可以从信息技术专业方向中选择一个 Major, 并按该方向完成专业课程. 以及完成Minor辅修专业的课程和公共课.
 
+\subsubsection{IT Major}
+
 \paragraph{QUT 最后一年可选择的专业方向}
 QUT 信息技术专业的 Major Options 包括以下方向 (括号内为英文名称, 其中前四个方向无法选择\footnotemark): 
 
@@ -439,7 +334,7 @@ QUT 信息技术专业的 Major Options 包括以下方向 (括号内为英文�
 	\item 企业计算 (Enterprise Computing Major); 
 	\item 流程分析与自动化 (Process Analytics and Automation Major); 
 \end{itemize}
-\footnotetext{此处``无法选择''仅指本项目当前的 JIT--QUT 课程衔接安排, 不是 QUT 对所有 Bachelor of Information Technology 学生的通用限制. QUT 官方课程结构中, Major, Complementary Studies 和每学期学习负荷都有独立规定; 本项目最终可选方向, 是否需要补修 Core Unit, 以及能否超出常规 4 门课负荷, 均以个人 Advanced Standing, 开课安排和 QUT 批准的 Study Plan 为准. 课程结构见 \official{https://www.qut.edu.au/courses/bachelor-of-information-technology-enterprise-computing}{QUT BIT 页面}; 标准负荷见 \official{https://www.qut.edu.au/study/international/study-abroad-program/what-can-i-study}{QUT 官方说明}. }
+\footnotetext{“无法选择”仅指本项目当前的 JIT--QUT 衔接安排，不代表 QUT 的普遍限制；最终 Major、补修要求和课程负荷以个人 Advanced Standing、开课安排及 QUT 批准的 Study Plan 为准。详见 \official{https://www.qut.edu.au/courses/bachelor-of-information-technology-enterprise-computing}{QUT BIT 页面}和\official{https://www.qut.edu.au/study/international/study-abroad-program/what-can-i-study}{官方说明}。}
 
 \paragraph{三项专业方向及课程 (\checkmark 表示已在国内修过的课程)}
 \mbox{}\par
@@ -483,6 +378,7 @@ QUT 信息技术专业的 Major Options 包括以下方向 (括号内为英文�
 \end{longtable}
 \normalsize
 
+\newpage
 \textbf{流程分析与自动化}~\texttt{IN01MJR-PANAUT}\par
 \textit{Process Analytics and Automation Major}\par
 \scriptsize
@@ -558,7 +454,6 @@ QUT 信息技术专业的 Major Options 包括以下方向 (括号内为英文�
 \normalsize
 
 
-\newpage
 \section{QUT生活}\label{sec:qut-life}
 
 本节主要介绍赴 QUT 学习期间的学期节奏, 日常开销和住宿选择. 具体安排以 QUT 当年的 Academic Calendar, 个人 Study Plan 和实际租房合同为准.
@@ -825,10 +720,13 @@ Translink 的 Journey 和换乘规则 &
 公共交通 & 上课日往返约 A\$1/天, 并预留少量额外出行 & A\$170--365 & 约 ￥816--1,752 \\
 往返机票 & 每年往返一次, 单程约 ￥3,000--5,000 & 约 A\$1,250--2,083 & 约 ￥6,000--10,000 \\
 \midrule
-合计 (twin) & 学费 + 生活费 + twin + 手机 + 公交 + 机票 & 约 A\$69,770--74,720 & 约 ￥334,900--358,700 \\
-合计 (ensuite) & 学费 + 生活费 + ensuite + 手机 + 公交 + 机票 & 约 A\$82,770--87,720 & 约 ￥397,300--421,100 \\
+合计 (twin) & 见脚注\footnotemark[7] & 约 A\$69,770--74,720 & 约 ￥334,900--358,700 \\
+合计 (ensuite) & 见脚注\footnotemark[8] & 约 A\$82,770--87,720 & 约 ￥397,300--421,100 \\
 \end{longtable} 
-\footnotetext{人民币金额统一按 A\$1 = ￥4.80 粗略换算; 机票原始口径为人民币单程约 ￥3,000--5,000, 表中澳元数为反向折算后的近似值.}
+\footnotetext[6]{人民币金额统一按 A\$1 = ￥4.80 粗略换算; 机票原始口径为人民币单程约 ￥3,000--5,000, 表中澳元数为反向折算后的近似值.}
+\footnotetext[7]{合计 (twin) 的计算口径为: 学费 + 生活费 + twin 住宿 + 手机卡 + 公共交通 + 往返机票.}
+\footnotetext[8]{合计 (ensuite) 的计算口径为: 学费 + 生活费 + ensuite 住宿 + 手机卡 + 公共交通 + 往返机票.}
+\setcounter{footnote}{8}
 \normalsize
 
 如果只在 QUT 两个正式学期期间租房和居住, 费用会低于上表; 但很多房屋合同按 6 个月或 52 周签订, 假期仍需要支付租金. 另外, 每多一次往返机票, 还应再预留约人民币 6,000--10,000 元 (约 A\$1,250--2,083).
@@ -922,78 +820,83 @@ Major & 2027 国际学生学费 & 标准学年负荷 \\
 按 96 cp/年粗略折算, 12 cp 单元约为 A\$5,837.50. 这只是平均折算值, 不能替代 QUT 对具体单元的收费.
 
 \clearpage
-\section{QUT 2027年学术日历}\label{app:qut-calendar}
+% 日历原 PDF 为 297 mm × 210 mm 的横向页面.
+% 页面上方添加附录信息, 下方保留空白, 同时保持日历原始横向宽度.
+\newsavebox{\qutcalendarbox}
+\newlength{\qutcalendarwidth}
+\newlength{\qutcalendarheight}
+\sbox{\qutcalendarbox}{\includegraphics{pics/qut-academic-calendar-2027.pdf}}
+\setlength{\qutcalendarwidth}{\wd\qutcalendarbox}
+\setlength{\qutcalendarheight}{\dimexpr\ht\qutcalendarbox+\dp\qutcalendarbox\relax}
+\paperwidth=\qutcalendarwidth
+\paperheight=\dimexpr\qutcalendarheight+55mm\relax
+\pagewidth=\qutcalendarwidth
+\pageheight=\dimexpr\qutcalendarheight+55mm\relax
+\newgeometry{margin=0mm}
+\thispagestyle{empty}
+\refstepcounter{section}
+\label{app:qut-calendar}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}QUT 2027年学术日历}
 
-以下为 QUT 官方发布的 2027 Academic Calendar. 日历中包含 Semester 1, Semester 2, QUT You, Summer 和考试安排, 原始文件保留横向版式. 来源: \official{https://www.qut.edu.au/about/key-dates-and-academic-calendar/academic-calendar/2027-academic-calendar}{QUT 2027 Academic Calendar 官方页面}.
+\begin{minipage}{\qutcalendarwidth}
+  \vspace*{5mm}
+  {\scriptsize\hbox to \qutcalendarwidth{\hspace*{25mm}\thesection\quad QUT 2027年学术日历\hfil\thepage\hspace*{25mm}}\par}
+  \vspace{3mm}
+  \begin{minipage}{\dimexpr\qutcalendarwidth-50mm\relax}
+    \centering
+    {\large\bfseries \thesection\quad QUT 2027年学术日历\par}
+    \vspace{2mm}
+    {\small 来源：\official{https://www.qut.edu.au/about/key-dates-and-academic-calendar/academic-calendar/2027-academic-calendar}{QUT 2027 Academic Calendar 官方页面}\par}
+    \vspace{1.5mm}
+    \raggedright
+    {\footnotesize 以下为 QUT 官方发布的 2027 Academic Calendar, 包含 Semester 1, Semester 2, QUT You, Summer 和考试安排. PS: QUT You 是给 QUT 大一新生上的公共课, 我们不需要学习.\par}
+  \end{minipage}
+  \vspace{4mm}
+\end{minipage}
 
-PS: QUT You 我们不需要学习, 这是给 QUT 大一新生上的公共课.
-
-\begin{figure}[p]
- \centering
- {\small 来源: \official{https://www.qut.edu.au/about/key-dates-and-academic-calendar/academic-calendar/2027-academic-calendar}{QUT 2027 Academic Calendar 官方页面}\par\vspace{0.6em}}
- \includegraphics[page=1,width=\textwidth,height=0.88\textheight,keepaspectratio]{pics/qut-academic-calendar-2027.pdf}
-\end{figure}
+\noindent\usebox{\qutcalendarbox}
+\vspace*{7mm}
+\clearpage
+\restoregeometry
+\paperwidth=210mm
+\paperheight=297mm
+\pagewidth=210mm
+\pageheight=297mm
 
 \clearpage
-\section{昆士兰州与布里斯班地理信息}\label{app:geography}
+\qutmapsection{app:geography}{昆士兰州与布里斯班地理信息}
+\qutmapappendixpage
+  {\official{https://www.worldmap1.com/map-australia.asp}{WorldMap1 -- Map Australia}}
+  {昆士兰州简称昆州. 下面按“澳大利亚--昆士兰州--布里斯班”的顺序递进展示位置关系. 澳大利亚各州及领地示意图.}
+  {\includegraphics[width=\textwidth]{pics/aus-map.jpg}}
+\qutmapappendixpage
+  {\official{https://www.mapnations.com/countries/australia/states/queensland-map.html}{MapNations -- Queensland Map}}
+  {昆士兰州行政区地图.}
+  {\includegraphics[width=\textwidth]{pics/queensland-map.jpg}}
+\qutmapappendixpage
+  {\official{https://thingstodoinbrisbanemap.com.au/}{Things to Do in Brisbane Map}}
+  {布里斯班城市地图（Brisbane-map.pdf 第 2 页）.}
+  {\includegraphics[page=2]{pics/Brisbane-map.pdf}}
 
-昆士兰州简称昆州. 下面按``澳大利亚--昆士兰州--布里斯班''的顺序递进展示位置关系. 
+\qutmapsection{app:QUT-map}{QUT 相关的地图}
+\qutmapappendixpage
+  {\official{https://oceania.aib.world/wp-content/uploads/sites/10/2022/08/QUT-Brisbane-Maps.pdf}{QUT Brisbane Maps}}
+  {Oceania 相关的 QUT 地图, 第 1 页.}
+  {\includegraphics[page=1]{pics/QUT-Brisbane-Maps.pdf}}
+\qutmapappendixpage
+  {\official{https://oceania.aib.world/wp-content/uploads/sites/10/2022/08/QUT-Brisbane-Maps.pdf}{QUT Brisbane Maps}}
+  {Oceania 相关的 QUT 地图, 第 2 页.}
+  {\includegraphics[page=2]{pics/QUT-Brisbane-Maps.pdf}}
+\qutmapappendixpage
+  {\official{https://oceania.aib.world/wp-content/uploads/sites/10/2022/08/QUT-Brisbane-Maps.pdf}{QUT Brisbane Maps}}
+  {Oceania 相关的 QUT 地图, 第 3 页.}
+  {\includegraphics[page=3]{pics/QUT-Brisbane-Maps.pdf}}
 
-来源对应: 澳大利亚地图来自\official{https://www.worldmap1.com/map-australia.asp}{WorldMap1}; 昆士兰州地图来自\official{https://www.mapnations.com/countries/australia/states/queensland-map.html}{MapNations}; 布里斯班地图来自\official{https://thingstodoinbrisbanemap.com.au/}{Things to Do in Brisbane Map}.
-
-\begin{figure}[H]
- \centering
- \includegraphics[width=0.8\textwidth]{pics/aus-map.jpg}
- \caption{澳大利亚各州及领地示意图}
- \par\small 来源: \official{https://www.worldmap1.com/map-australia.asp}{WorldMap1 -- Map Australia}
-\end{figure}
-
-\clearpage
-\begin{figure}[H]
- \centering
- \includegraphics[width=0.8\textwidth]{pics/queensland-map.jpg}
- \caption{昆士兰州地图}
- \par\small 来源: \official{https://www.mapnations.com/countries/australia/states/queensland-map.html}{MapNations -- Queensland Map}
-\end{figure}
-
-\clearpage
-\begin{figure}[H]
- \centering
- {\small 来源: \official{https://thingstodoinbrisbanemap.com.au/}{Things to Do in Brisbane Map}\par\vspace{0.6em}}
- \includegraphics[page=2,width=1\textwidth]{pics/Brisbane-map.pdf}
- \caption{布里斯班城市地图 (Brisbane-map.pdf 第 2 页)}
-\end{figure}
-
-\clearpage
-\section{QUT 相关的地图}\label{app:QUT-map}
-以下为 Oceania 相关的QUT地图: \official{https://oceania.aib.world/wp-content/uploads/sites/10/2022/08/QUT-Brisbane-Maps.pdf}{QUT Brisbane Maps}.
-
-\begin{figure}[H]
- \centering
- {\small 来源: \official{https://oceania.aib.world/wp-content/uploads/sites/10/2022/08/QUT-Brisbane-Maps.pdf}{QUT Brisbane Maps}\par\vspace{0.6em}}
- \includegraphics[page=1,width=\textwidth,height=0.88\textheight,keepaspectratio]{pics/QUT-Brisbane-Maps.pdf}
-\end{figure}
-\clearpage
-\begin{figure}[p]
- \centering
- {\small 来源: \official{https://oceania.aib.world/wp-content/uploads/sites/10/2022/08/QUT-Brisbane-Maps.pdf}{QUT Brisbane Maps}\par\vspace{0.6em}}
- \includegraphics[page=2,width=\textwidth,height=0.88\textheight,keepaspectratio]{pics/QUT-Brisbane-Maps.pdf}
-\end{figure}
-\clearpage
-\begin{figure}[p]
- \centering
- {\small 来源: \official{https://oceania.aib.world/wp-content/uploads/sites/10/2022/08/QUT-Brisbane-Maps.pdf}{QUT Brisbane Maps}\par\vspace{0.6em}}
- \includegraphics[page=3,width=\textwidth,height=0.88\textheight,keepaspectratio]{pics/QUT-Brisbane-Maps.pdf}
-\end{figure}
-
-\clearpage
-\section{金陵科技学院 (江宁校区) 地图}\label{app:jit-map}
-\begin{figure}[H]
-	\centering
-	{\small 来源: 金陵科技学院 (江宁校区) 地图, 作者: 李京儒\par\vspace{0.6em}}
-	\includegraphics[page=1,width=0.8\textwidth,keepaspectratio]{pics/map.pdf}
-	\caption{金陵科技学院 (江宁校区) 地图, 作者: 李京儒}
-\end{figure}
+\qutmapsection{app:jit-map}{金陵科技学院 (江宁校区) 地图}
+\qutmapappendixpage
+  {金陵科技学院 (江宁校区) 地图, 作者: 李京儒}
+  {金陵科技学院 (江宁校区) 地图.}
+  {\includegraphics[page=1]{pics/map.pdf}}
 \clearpage
 \section{未达到语言要求时的语言班说明}\label{app:ielts-requirement}
 
@@ -1083,16 +986,23 @@ PS: QUT You 我们不需要学习, 这是给 QUT 大一新生上的公共课.
 \section{澳洲房型介绍}\label{app:room}
 
 \begin{figure}[H]
-	\centering
-	{\small 来源: 异乡好居\par\vspace{0.6em}}
-	\includegraphics[width=0.8\textwidth]{pics/room\_1.jpg}
+  \centering
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{pics/room\_1.jpg}
+    \par\smallskip
+    {\small 来源：异乡好居\par}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{pics/room\_2.jpg}
+    \par\smallskip
+    {\small 来源：异乡好居\par}
+  \end{minipage}
 \end{figure}
-\clearpage
-\begin{figure}[H]
-	\centering
-	{\small 来源: 异乡好居\par\vspace{0.6em}}
-	\includegraphics[width=0.8\textwidth]{pics/room\_2.jpg}
-\end{figure}
+
+
+
+
+
 \end{document}
-
-

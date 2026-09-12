@@ -1,0 +1,164 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jit-qut}[2026/09/12 JIT-QUT 项目求生指南自定义命令]
+
+\RequirePackage{needspace}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{etoolbox}
+
+% 课程卡片状态
+\newif\ifcourseopen
+\newif\ifcourseheaderprinted
+\newcounter{courseitem}
+
+\newcommand{\finishcourse}{%
+  \ifcourseopen
+    \par\end{minipage}\end{tcolorbox}%
+    \courseopenfalse
+  \fi
+}
+
+\newcommand{\coursereset}{%
+  \finishcourse
+  \setcounter{courseitem}{0}%
+  \courseheaderprintedfalse
+}
+
+\newcommand{\courseheader}{%
+  \ifcourseheaderprinted\else
+    \par\medskip
+    \noindent
+    \begin{tcolorbox}[
+      enhanced,
+      colback=black!12,
+      colframe=black!12,
+      boxrule=0pt,
+      arc=0pt,
+      outer arc=0pt,
+      boxsep=0pt,
+      left=6pt,
+      right=6pt,
+      top=3pt,
+      bottom=3pt,
+      width=\textwidth
+    ]%
+      \small
+      \begin{minipage}[t]{0.08\linewidth}
+        \raggedright\bfseries 学分
+      \end{minipage}\hfill
+      \begin{minipage}[t]{0.92\linewidth}
+        \bfseries 课程描述
+      \end{minipage}
+    \end{tcolorbox}%
+    \courseheaderprintedtrue
+  \fi
+}
+
+\newenvironment{coursetable}{\par\medskip}{\finishcourse\par\medskip}
+
+\newcommand{\course}[2]{%
+  \finishcourse
+  \courseheader
+  \stepcounter{courseitem}%
+  \ifodd\value{courseitem}
+    \def\coursebg{white}%
+  \else
+    \def\coursebg{black!5}%
+  \fi
+  \begin{tcolorbox}[
+    enhanced,
+    colback=\coursebg,
+    colframe=\coursebg,
+    boxrule=0pt,
+    arc=0pt,
+    outer arc=0pt,
+    boxsep=0pt,
+    left=6pt,
+    right=6pt,
+    top=4pt,
+    bottom=4pt,
+    before skip=1pt,
+    after skip=1pt,
+    width=\textwidth
+  ]%
+    \footnotesize
+    \begin{minipage}[t]{0.08\linewidth}
+      \raggedright\bfseries #2
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.92\linewidth}
+      \textbf{#1}\par
+      \courseopentrue
+      \ignorespaces
+}
+
+% 正式来源、已修课程和不可选 Major 的统一显示方式
+\newcommand{\official}[2]{\href{#1}{#2}}
+\newcommand{\completedcourse}[2]{%
+  \textcolor{black!50}{\href{#1}{\textcolor{blue!50!white}{#2}}\,\checkmark}%
+}
+\newcommand{\unavailablemajor}[1]{\textcolor{black!40}{\sout{#1}}}
+
+% 在切换标题或分页时自动关闭课程卡片，同时保留标题的可选参数
+\pretocmd{\section}{\coursereset}{}{}
+\pretocmd{\subsection}{\coursereset}{}{}
+% 课程小节需与表头及首条课程保持在同一页
+\pretocmd{\subsubsection}{\coursereset\Needspace{8\baselineskip}}{}{}
+\let\orignewpage\newpage
+\renewcommand{\newpage}{\finishcourse\orignewpage}
+\let\origclearpage\clearpage
+\renewcommand{\clearpage}{\finishcourse\origclearpage}
+
+% 地图附录页面：按地图实际显示宽度创建页面，并统一添加页眉、页码和来源
+\newsavebox{\qutmapbox}
+\newlength{\qutmapwidth}
+\newlength{\qutmapheight}
+\newcommand{\qutmapsectiontitle}{}
+
+\newcommand{\qutmapsection}[2]{%
+  \refstepcounter{section}%
+  \label{#1}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#2}%
+  \def\qutmapsectiontitle{#2}%
+}
+
+\newcommand{\qutmapappendixpage}[3]{%
+  \clearpage
+  \sbox{\qutmapbox}{#3}%
+  \setlength{\qutmapwidth}{\wd\qutmapbox}%
+  \setlength{\qutmapheight}{\dimexpr\ht\qutmapbox+\dp\qutmapbox\relax}%
+  \paperwidth=\qutmapwidth
+  \paperheight=\dimexpr\qutmapheight+75mm\relax
+  \pagewidth=\qutmapwidth
+  \pageheight=\dimexpr\qutmapheight+75mm\relax
+  \newgeometry{margin=0mm}%
+  \textwidth=\qutmapwidth
+  \textheight=\dimexpr\qutmapheight+75mm\relax
+  \hsize=\textwidth
+  \vsize=\textheight
+  \thispagestyle{empty}%
+  \begin{minipage}{\qutmapwidth}
+    \vspace*{5mm}
+    {\scriptsize\hbox to \qutmapwidth{\hspace*{25mm}\thesection\quad \qutmapsectiontitle\hfil\thepage\hspace*{25mm}}\par}
+    \vspace{3mm}
+    \begin{minipage}{\dimexpr\qutmapwidth-50mm\relax}
+      \centering
+      {\large\bfseries \thesection\quad \qutmapsectiontitle\par}
+      \vspace{2mm}
+      {\small 来源：#1\par}
+      \vspace{1.5mm}
+      \raggedright
+      {\footnotesize #2\par}
+    \end{minipage}
+    \vspace{4mm}
+  \end{minipage}
+
+  \noindent\usebox{\qutmapbox}
+  \vspace*{7mm}
+  \clearpage
+  \restoregeometry
+  \paperwidth=210mm
+  \paperheight=297mm
+  \pagewidth=210mm
+  \pageheight=297mm
+}
+
+\endinput
