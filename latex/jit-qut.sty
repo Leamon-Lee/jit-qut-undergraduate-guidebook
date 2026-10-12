@@ -145,9 +145,9 @@
 \newcommand{\qutmapsectiontitle}{}
 
 \newcommand{\qutmapsection}[2]{%
-  \refstepcounter{section}%
+  \refstepcounter{subsection}%
   \label{#1}%
-  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#2}%
+  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#2}%
   \def\qutmapsectiontitle{#2}%
 }
 
@@ -168,11 +168,11 @@
   \thispagestyle{empty}%
   \begin{minipage}{\qutmapwidth}
     \vspace*{5mm}
-    {\scriptsize\hbox to \qutmapwidth{\hspace*{25mm}\thesection\quad \qutmapsectiontitle\hfil\thepage\hspace*{25mm}}\par}
+    {\scriptsize\hbox to \qutmapwidth{\hspace*{25mm}\thesubsection\quad \qutmapsectiontitle\hfil\thepage\hspace*{25mm}}\par}
     \vspace{3mm}
     \begin{minipage}{\dimexpr\qutmapwidth-50mm\relax}
       \centering
-      {\large\bfseries \thesection\quad \qutmapsectiontitle\par}
+      {\large\bfseries \thesubsection\quad \qutmapsectiontitle\par}
       \vspace{2mm}
       {\small 来源：#1\par}
       \vspace{1.5mm}

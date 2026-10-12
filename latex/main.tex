@@ -1,7 +1,9 @@
 % !TeX program = lualatex
 \documentclass{jit-qut}
+\usepackage{multirow}
+\newfontfamily\qutarial{Arial}
 
-\newcommand{\guideversion}{V26.2.3.1}
+\newcommand{\guideversion}{V26.2.4.1}
 
 \title{\zihao{-2}\bfseries JIT-QUT 项目求生指南\\[0.35em]{\zihao{-4}\mdseries\texttt{\guideversion}}}
 \author{%
@@ -194,7 +196,7 @@ Business Analysis for IT Systems (Business Requirements Analysis) & 12 \\
 \course{形势与政策 1}{0.25}
 \course{心理健康教育}{2}
 \course{基础课 (体育1)}{1}
-\newpage
+
 \subsection{大一下学期}
 如果 C++ 和 Python 学得不错, 有兴趣的话可以深入学习一下算法. 可以参考 \official{https://www.hello-algo.com/}{Hello 算法} 入个门, 后面去 \official{https://www.acwing.com/}{AcWing} 和 \official{https://www.luogu.com.cn/}{洛谷} 上继续深造一下. 
 \subsubsection{国内课程}
@@ -216,8 +218,6 @@ Business Analysis for IT Systems (Business Requirements Analysis) & 12 \\
 \course{Introduction to Computer Systems (计算机系统概论)}{3}
 \course{Database Management (数据库原理)}{3}
 
-
-\newpage
 \subsection{大二上学期}
 
 \subsubsection{国内课程}
@@ -236,7 +236,6 @@ Business Analysis for IT Systems (Business Requirements Analysis) & 12 \\
 \course{IT Systems Design (IT 系统设计)}{4}
 \course{Building IT Systems (IT 系统架构)}{3}
 
-\newpage
 \subsection{大二下学期}
 
 \subsubsection{国内课程}
@@ -252,7 +251,6 @@ Business Analysis for IT Systems (Business Requirements Analysis) & 12 \\
 \course{Introduction to Enterprise Systems (企业系统导论)}{3}
 \course{Programming Principles (编程原理)}{3}
 
-\newpage
 \subsection{大三上学期}
 
 \subsubsection{国内课程}
@@ -283,15 +281,142 @@ Business Analysis for IT Systems (Business Requirements Analysis) & 12 \\
 \course{Business Requirements Analysis (企业数据挖掘)}{3}
 
 \newpage
-\subsection{第四年QUT课程}
+\subsection{第四年 QUT 课程与选课安排}
 
-第四年赴 QUT 学习时, 具体的课程安排, 可选择的 Major, Minor, Advanced Standing 和 Study Plan 可能会因年份和个人情况有所不同, 因此本指南不再列出固定的第四年课程清单.
+下面根据实际情况整理了 3 种 Major--Minor 组合下的 QUT 选课方案, 并分别列出 7 月和 2 月入学的修读顺序. 入学月份主要取决于语言成绩: 已达到 QUT 直入要求 (雅思总分不低于 6.5, 单项不低于 6.0) 的同学, 可选择 7 月入学; 通常在 7 月初金科放暑假后出发, 并于 7 月底前往 QUT 准备开学, 先修 Semester 2 (S2), 再修下一学期的 Semester 1 (S1). 英语成绩暂未达到直入要求的同学, 可选择 2 月入学, 先修 Semester 1 (S1), 再修 Semester 2 (S2). 具体语言要求及语言班安排请参阅附录~\ref{app:ielts-requirement}. 表中的学期表示对应学期应修的课程, 请按照自己的 Major--Minor 组合选择对应方案, 不要混用不同方案的课程.
 
-建议同学们在第四年来澳并进行选课时, 及时联系项目相关负责老师或 QUT 相关工作人员, 根据当年的课程安排以及个人的 Advanced Standing 确认自己的 Study Plan 和选课方案, 以免由于选课不当而影响毕业.
+附件特别说明, Major--Minor 组合以及 Study Plan 中的课程不应自行更改. 因此, 到 QUT 后应优先按照下面对应方案核对课程, 并结合个人的 Advanced Standing 和 QUT 当年的正式选课页面完成注册. 如学校或 QUT 后续发放了新的 Study Plan, 应以最新正式文件为准.
 
-具体课程及专业方向信息也可以参考 QUT 官方网站, 并以当年学校提供的最新信息和正式 Study Plan 为准.
-\normalsize
+\begingroup
+\small
+\setstretch{1.05}
+\renewcommand{\arraystretch}{0.9}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0.35em}
 
+\newcommand{\qutcell}[1]{%
+\begin{minipage}[t]{\linewidth}\raggedright #1\end{minipage}}
+
+\newcommand{\qutlabel}[1]{%
+\begin{minipage}[t]{0.15\textwidth}\raggedright #1\end{minipage}}
+
+\newcommand{\qutfirstrow}[5]{%
+\cellcolor{white}\multirow[t]{4}{*}{\qutlabel{#1}} &
+\qutcell{#2} &
+\qutcell{#3} &
+\qutcell{#4} &
+\qutcell{#5}\\}
+
+\newcommand{\qutnextrow}[4]{%
+\cellcolor{white} & \qutcell{#1} &
+\qutcell{#2} &
+\qutcell{#3} &
+\qutcell{#4}\\}
+
+\subsubsection{7 月与 2 月入学方案}
+{\footnotesize 7 月入学先修 S2, 再修下一学期的 S1; 2 月入学先修 S1, 再修 S2. 请按自己的 Major--Minor 组合选择对应行, 并按照表头从左到右的学期顺序修读.\par}
+
+{\qutarial
+\fontsize{7pt}{8.4pt}\selectfont
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{longtable}{@{}>{\columncolor{white}}p{0.15\textwidth}@{\hspace{0.01\textwidth}}p{0.2025\textwidth}@{\hspace{0.01\textwidth}}p{0.2025\textwidth}@{\hspace{0.01\textwidth}}p{0.2025\textwidth}@{\hspace{0.01\textwidth}}p{0.2025\textwidth}@{}}
+\toprule
+\multicolumn{1}{c}{Major--Minor} &
+\multicolumn{2}{c}{7 月入学} &
+\multicolumn{2}{c}{2 月入学} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & S2 & S1 & S1 & S2 \\
+\midrule
+\endhead
+\multicolumn{5}{@{}l@{}}{\rule{\textwidth}{0.08em}}\\
+\endfoot
+\rowcolor{gray!15}
+\qutfirstrow
+{\textbf{EC + BA}\footnotemark\\[-0.1em]}
+{Capstone I}
+{Capstone II}
+{Capstone I}
+{Capstone II}
+\rowcolor{white}
+\qutnextrow
+{Applied IoT}
+{Introduction to AI for IT Professionals}
+{Introduction to AI for IT Professionals}
+{Applied IoT}
+\rowcolor{gray!15}
+\qutnextrow
+{Enterprise Architecture}
+{Software Engineering for Enterprise Systems}
+{Software Engineering for Enterprise Systems}
+{Enterprise Architecture}
+\rowcolor{white}
+\qutnextrow
+{Data Analytics for Enterprise Systems}
+{Blockchain Technology}
+{Blockchain Technology}
+{Data Analytics for Enterprise Systems}
+\cmidrule(lr){1-5}
+\rowcolor{gray!15}
+\qutfirstrow
+{\textbf{BA + IoT}\footnotemark}
+{Capstone I}
+{Capstone II}
+{Capstone I}
+{Capstone II}
+\rowcolor{white}
+\qutnextrow
+{Applied IoT}
+{Introduction to AI for IT Professionals}
+{Introduction to AI for IT Professionals}
+{Applied IoT}
+\rowcolor{gray!15}
+\qutnextrow
+{Enterprise Architecture}
+{IT Consulting \& Leadership}
+{IT Consulting \& Leadership}
+{Enterprise Architecture}
+\rowcolor{white}
+\qutnextrow
+{Data Analytics for Enterprise Systems}
+{Blockchain Technology}
+{Blockchain Technology}
+{Data Analytics for Enterprise Systems}
+\cmidrule(lr){1-5}
+\rowcolor{gray!15}
+\qutfirstrow
+{\textbf{PA + IoT}\footnotemark}
+{Capstone II}
+{Capstone I}
+{Capstone I}
+{Capstone II}
+\rowcolor{white}
+\qutnextrow
+{Applied IoT}
+{Introduction to AI for IT Professionals}
+{Introduction to AI for IT Professionals}
+{Applied IoT}
+\rowcolor{gray!15}
+\qutnextrow
+{Data Ethics \& Society}
+{Process Technologies}
+{Process Technologies}
+{Data Ethics \& Society}
+\rowcolor{white}
+\qutnextrow
+{Process Improvement}
+{Blockchain Technology}
+{Blockchain Technology}
+{Process Improvement}
+\end{longtable}
+\footnotetext[\numexpr\value{footnote}-2\relax]{EC + BA: Enterprise Computing major and Business Analysis and IT Management minor.}
+\footnotetext[\numexpr\value{footnote}-1\relax]{BA + IoT: Business Analysis and IT Management major and Internet of Things (IoT) minor.}
+\footnotetext[\value{footnote}]{PA + IoT: Process Analytics and Automation major and Internet of Things (IoT) minor.}
+}
+
+\endgroup
+
+\newpage
 
 \section{QUT生活}\label{sec:qut-life}
 
@@ -659,7 +784,8 @@ BC 指 British Council (英国文化教育协会). BC 和 IDP 都提供雅思相
 \clearpage
 \appendix
 \clearpage
-\section{QUT国际学生学费参考}\label{app:qut-fees}
+\section{附录}
+\subsection{QUT国际学生学费参考}\label{app:qut-fees}
 
 以下金额为 QUT 官方课程页面当前列出的 2027 年国际学生学费. 七个 Bachelor of Information Technology Major 页面列出的全日制标准负荷均为 96 credit points/年, 年学费均为 A\$46,700. QUT 同时说明, 实际费用会随所选单元变化, 学费也会按年度调整. 因此, 这张表适合做预算, 最终金额应以当年的 offer, Study Plan 和 invoice 为准.
 
@@ -699,17 +825,17 @@ Major & 2027 国际学生学费 & 标准学年负荷 \\
 \pageheight=\dimexpr\qutcalendarheight+55mm\relax
 \newgeometry{margin=0mm}
 \thispagestyle{empty}
-\refstepcounter{section}
+\refstepcounter{subsection}
 \label{app:qut-calendar}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}QUT 2027年学术日历}
+\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}QUT 2027年学术日历}
 
 \begin{minipage}{\qutcalendarwidth}
   \vspace*{5mm}
-  {\scriptsize\hbox to \qutcalendarwidth{\hspace*{25mm}\thesection\quad QUT 2027年学术日历\hfil\thepage\hspace*{25mm}}\par}
+  {\scriptsize\hbox to \qutcalendarwidth{\hspace*{25mm}\thesubsection\quad QUT 2027年学术日历\hfil\thepage\hspace*{25mm}}\par}
   \vspace{3mm}
   \begin{minipage}{\dimexpr\qutcalendarwidth-50mm\relax}
     \centering
-    {\large\bfseries \thesection\quad QUT 2027年学术日历\par}
+    {\large\bfseries \thesubsection\quad QUT 2027年学术日历\par}
     \vspace{2mm}
     {\small 来源：\official{https://www.qut.edu.au/about/key-dates-and-academic-calendar/academic-calendar/2027-academic-calendar}{QUT 2027 Academic Calendar 官方页面}\par}
     \vspace{1.5mm}
@@ -763,7 +889,7 @@ Major & 2027 国际学生学费 & 标准学年负荷 \\
   {金陵科技学院 (江宁校区) 地图.}
   {\includegraphics[page=1]{pics/map.pdf}}
 \clearpage
-\section{未达到语言要求时的语言班说明}\label{app:ielts-requirement}
+\subsection{未达到语言要求时的语言班说明}\label{app:ielts-requirement}
 
 下表将 2026 年语言入学要求整理为文字表格, 便于和自己的 IELTS, PTE 或 TOEFL 成绩对照. 语言班和主课入学要求可能调整, 实际申请时应以 QUT 官方语言要求, QUT College 课程安排以及个人 offer 为准.
 
@@ -827,7 +953,7 @@ Major & 2027 国际学生学费 & 标准学年负荷 \\
 \endgroup
 
 \clearpage
-\section{校园跑细则}\label{app:school-running}
+\subsection{校园跑细则}\label{app:school-running}
 
 \begin{figure}[H]
 	\centering
@@ -848,7 +974,7 @@ Major & 2027 国际学生学费 & 标准学年负荷 \\
 \end{figure}
 
 \clearpage
-\section{澳洲房型介绍}\label{app:room}
+\subsection{澳洲房型介绍}\label{app:room}
 
 \begin{figure}[H]
   \centering
